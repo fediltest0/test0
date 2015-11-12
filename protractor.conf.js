@@ -3,12 +3,12 @@ exports.config = {
   sauceKey: process.env.SAUCE_ACCESS_KEY,
   multiCapabilities: [{
     'browserName': 'chrome',
-    'tunnel-identifier': 'chrome-' + process.env.TRAVIS_JOB_NUMBER,
+    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'name': 'test0 [chrome]',
     'build': process.env.TRAVIS_BUILD_NUMBER
   }, {
     'browserName': 'ie',
-    'tunnel-identifier': 'ie-' + process.env.TRAVIS_JOB_NUMBER,
+    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'name': 'test0 [ie]',
     'build': process.env.TRAVIS_BUILD_NUMBER
   }],
