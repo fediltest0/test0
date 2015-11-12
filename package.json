@@ -4,7 +4,7 @@
   "description": "test0",
   "author": "John Doe <fed.il.test0@gmail.com>",
   "scripts": {
-    "test": "echo test"
+    "test": "grunt"
   },
   "repository": {
     "type": "git",
