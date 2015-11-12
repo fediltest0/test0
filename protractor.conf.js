@@ -8,9 +8,9 @@ exports.config = {
     'name': 'test0 [Chrome]',
     'build': process.env.TRAVIS_BUILD_NUMBER
   }, {
-    'platform': 'WINDOWS',
+    'platform': 'Windows 7',
     'browserName': 'internet explorer',
-    'version': '9',
+    'version': '9.0',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'name': 'test0 [IE]',
     'build': process.env.TRAVIS_BUILD_NUMBER
