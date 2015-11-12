@@ -1,12 +1,17 @@
 exports.config = {
   sauceUser: process.env.SAUCE_USERNAME,
   sauceKey: process.env.SAUCE_ACCESS_KEY,
-  capabilities: {
+  multiCapabilities: [{
     'browserName': 'chrome',
-    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-    'name': 'test0 E2E',
+    'tunnel-identifier': 'chrome-' + process.env.TRAVIS_JOB_NUMBER,
+    'name': 'test0 [chrome]',
     'build': process.env.TRAVIS_BUILD_NUMBER
-  },
+  }, {
+    'browserName': 'ie',
+    'tunnel-identifier': 'ie-' + process.env.TRAVIS_JOB_NUMBER,
+    'name': 'test0 [ie]',
+    'build': process.env.TRAVIS_BUILD_NUMBER
+  }],
   framework: 'jasmine',
   specs: ['test/spec.js'],
  
